@@ -1,16 +1,12 @@
 {
     "mouseover": [
         {
-            "selector": ".scnuoj",
-            "text": ["快点进去 AC 几道题吧～"]
+            "selector": "a",
+            "text": ["要不要点进去看看？"]
         },
         {
-            "selector": ".discourse",
-            "text": ["据说论坛里面都是大神啊～"]
-        },
-        {
-            "selector": ".mirror",
-            "text": ["快来使用我们的软件源吧～"]
+            "selector": ".searchbox",
+            "text": ["在找什么东西呢，需要帮忙吗？"]
         }
     ],
     "click": [
