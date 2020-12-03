@@ -8,8 +8,19 @@
     <title>SCNU SoCoding Service Platform</title>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/all.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/all.min.css" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+            $("#scnuoj1").load("__secret/scnuoj.html");
+            $("#discourse1").load("__secret/discourse.html");
+            $("#mirror1").load("__secret/mirror.html");
+            $("#scnuoj2").load("__secret/scnuoj.html");
+            $("#discourse2").load("__secret/discourse.html");
+            $("#mirror2").load("__secret/mirror.html");
+        })
+    </script>
 </head>
 
 <body>
@@ -31,108 +42,43 @@
                 </div>
             </div>
         </section>
+        <div class="card bg-secondary">
+            <div class="card-body text-white">
+
+                <h3 class="card-title">SCNU Programming Contest 2020 (Onsite)</h3>
+                <p class="card-text">2020 年华南师范大学算法与程序设计竞赛 (现场赛)</p>
+
+                <span class="btn-group"><a class="btn btn-outline-light" target="_blank"
+                        href="http://10.191.65.243:8000/">内网入口
+                        <small>(推荐)</small></a> <a class="btn btn-outline-light" target="_blank"
+                        href="https://acm.socoding.cn/">公网入口</a></span>
+
+
+            </div>
+            <div class="card-footer">
+                <small class="text-white"><i class="fas fa-check text-white"></i> 站点已上线</small>
+                <!-- <small class="text-white"><i class="fas fa-ban text-white"></i> 站点维护中</small> -->
+            </div>
+        </div>
+        <p></p>
         <div class="d-none d-lg-block">
             <div class="card-group">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-light">SCNU Online Judge</h5>
-                        <p class="card-text">程序设计教学与训练平台</p>
-                        <p class="card-text text-muted"><a class="text-muted" target="_blank"
-                                href="https://oj.socoding.cn/"><small>公网入口</small></a><small> / </small><a
-                                class="text-muted" target="_blank"
-                                href="http://10.191.65.243:5000/"><small>内网入口</small></a><small> / </small><a
-                                class="text-muted" target="_blank"
-                                href="http://10.191.65.243:5050/"><small>体验新版</small></a>
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted"><i class="fas fa-check text-success"></i> 站点已上线</small>
-                        <!-- <small class="text-muted"><i class="fas fa-ban text-danger"></i> 站点维护中</small> -->
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-light">Discourse Forum</h5>
-                        <p class="card-text">面向所有学生的学术交流论坛
-                        </p>
-                        <p class="card-text text-muted"><a class="text-muted" target="_blank"
-                                href="https://socoding.cn/"><small>公网入口</small></a>
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted"><i class="fas fa-check text-success"></i> 站点已上线</small>
-                        <!-- <small class="text-muted"><i class="fas fa-ban text-danger"></i> 站点维护中</small> -->
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-light">Open Source Mirror</h5>
-                        <p class="card-text">开源软件镜像站</p>
-                        <p class="card-text text-muted"><a class="text-muted" target="_blank"
-                                href="http://10.191.65.243:9000/"><small>内网入口</small></a><small> / </small><a
-                                class="text-muted" target="_blank"
-                                href="https://socoding.cn/c/departments/mirror/27"><small>帮助中心</small></a>
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted"><i class="fas fa-check text-success"></i> 站点已上线</small>
-                        <!-- <small class="text-muted"><i class="fas fa-ban text-danger"></i> 站点维护中</small> -->
-                    </div>
-                </div>
+                <div class="card" id="scnuoj1"></div>
+                <div class="card" id="discourse1"></div>
+                <div class="card" id="mirror1"></div>
             </div>
         </div>
         <div class="d-lg-none">
-
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title fw-light">SCNU Online Judge</h5>
-                    <p class="card-text">程序设计教学与训练平台</p>
-                    <p class="card-text text-muted"><a class="text-muted" target="_blank"
-                            href="https://oj.socoding.cn/"><small>公网入口</small></a><small> / </small><a
-                            class="text-muted" target="_blank"
-                            href="http://10.191.65.243:5000/"><small>内网入口</small></a><small> / </small><a
-                            class="text-muted" target="_blank" href="http://10.191.65.243:5050/"><small>体验新版</small></a>
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><i class="fas fa-check text-success"></i> 站点已上线</small>
-                    <!-- <small class="text-muted"><i class="fas fa-ban text-danger"></i> 站点维护中</small> -->
-                </div>
-            </div>
+            <div class="card" id="scnuoj2"></div>
             <p></p>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title fw-light">Discourse Forum</h5>
-                    <p class="card-text">面向所有学生的学术交流论坛
-                    </p>
-                    <p class="card-text text-muted"><a class="text-muted" target="_blank"
-                            href="https://socoding.cn/"><small>公网入口</small></a>
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><i class="fas fa-check text-success"></i> 站点已上线</small>
-                    <!-- <small class="text-muted"><i class="fas fa-ban text-danger"></i> 站点维护中</small> -->
-                </div>
-            </div>
+            <div class="card" id="discourse2"></div>
             <p></p>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title fw-light">Open Source Mirror</h5>
-                    <p class="card-text">开源软件镜像站</p>
-                    <p class="card-text text-muted"><a class="text-muted" target="_blank"
-                            href="http://10.191.65.243:9000/"><small>内网入口</small></a><small> / </small><a
-                            class="text-muted" target="_blank"
-                            href="https://socoding.cn/c/departments/mirror/27"><small>帮助中心</small></a>
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted"><i class="fas fa-check text-success"></i> 站点已上线</small>
-                    <!-- <small class="text-muted"><i class="fas fa-ban text-danger"></i> 站点维护中</small> -->
-                </div>
-            </div>
+            <div class="card" id="mirror2"></div>
         </div>
+
     </div>
     <br>
+
 </body>
 
 </html>
