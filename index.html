@@ -1,67 +1,138 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <title>SCNU SoCoding Service Platform</title>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/all.min.js"></script>
-    <script src="/js/jquery.min.js"></script>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/all.min.css" rel="stylesheet">
-    <script>
-        $(document).ready(function () {
-            $("#scnuoj1").load("__secret/scnuoj.html");
-            $("#discourse1").load("__secret/discourse.html");
-            $("#mirror1").load("__secret/mirror.html");
-            $("#scnuoj2").load("__secret/scnuoj.html");
-            $("#discourse2").load("__secret/discourse.html");
-            $("#mirror2").load("__secret/mirror.html");
-        })
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>SoCoding 软件协会</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container">
-            <span class="navbar-brand">SCNU SoCoding Service Platform</span>
-            <div class="navbar-nav ml-auto nav">
-                <small class="d-none d-sm-inline text-secondary nav-link">华南师范大学软件协会服务平台</small>
-            </div>
-        </div>
-    </nav>
-    <br>
-    <div class="container">
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Hello, World</h1>
-                    <p class="lead text-muted">欢迎访问华南师范大学软件协会服务平台</p>
-                </div>
-            </div>
-        </section>
 
-        <p></p>
-        <div class="d-none d-lg-block py-5">
-            <div class="card-group">
-                <div class="card" id="scnuoj1"></div>
-                <div class="card" id="discourse1"></div>
-                <div class="card" id="mirror1"></div>
-            </div>
-        </div>
-        <div class="d-lg-none">
-            <div class="card" id="scnuoj2"></div>
-            <p></p>
-            <div class="card" id="discourse2"></div>
-            <p></p>
-            <div class="card" id="mirror2"></div>
-        </div>
-
+    <div clsss="layui-header">
+        <ul class="layui-nav">
+            <li class="layui-nav-item layui-this"><a href="./">SoCoding 软件协会</a></li>
+            <li class="layui-nav-item"><a target="_blank" href="//socoding.cn/">论坛</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">评测系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a target="_blank" href="http://10.191.65.243:5000/">SCNUOJ 校园网入口（推荐）</a></dd>
+                    <dd><a target="_blank" href="http://10.191.65.243:8000/">DOMjudge 校园网入口（推荐）</a></dd>
+                    <dd><a target="_blank" href="//oj.socoding.cn/">SCNUOJ 外网入口</a></dd>
+                    <dd><a target="_blank" href="//acm.socoding.cn/">DOMjudge 外网入口</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">镜像站</a>
+                <dl class="layui-nav-child">
+                    <dd><a target="_blank" href="http://10.191.65.243:9000/">校园网入口（推荐）</a></dd>
+                    <dd><a target="_blank" href="//mirrors.socoding.cn/">外网入口</a></dd>
+                </dl>
+            </li>
+        </ul>
     </div>
-    <br>
 
+    <div class="layui-layout-admin">
+        <div style="padding: 15px;">
+
+            <blockquote class="layui-elem-quote"><span class="layui-breadcrumb">
+                    <a><cite>华南师范大学软件协会隶属于软件学院，是华师南海校区最具实力的以 IT
+                            专业学生为载体的组织</cite></a>
+                    <a href="//github.com/scnu-socoding/">GitHub</a>
+                    <a href="mailto:ruanxie_scnu@163.com">Email</a>
+                </span></blockquote>
+
+
+            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+                <legend>软协服务近期运作资讯</legend>
+            </fieldset>
+            <ul class="layui-timeline">
+                <li class="layui-timeline-item">
+                    <i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop layui-timeline-axis"></i>
+                    <div class="layui-timeline-content layui-text">
+                        <div class="layui-timeline-title">Pending: 镜像 Ubuntu 21.04 相关内容。</div>
+                    </div>
+                </li>
+                <li class="layui-timeline-item">
+                    <i class="layui-icon layui-timeline-axis"></i>
+                    <div class="layui-timeline-content layui-text">
+                        <div class="layui-timeline-title">各项服务均正常工作中。</div>
+                    </div>
+                </li>
+                <li class="layui-timeline-item">
+                    <i class="layui-icon layui-timeline-axis"></i>
+                    <div class="layui-timeline-content layui-text">
+                        <div class="layui-timeline-title">2021/03/20: 软协论坛维护完成并已重新上线。</div>
+                    </div>
+                </li>
+                <li class="layui-timeline-item">
+                    <i class="layui-icon layui-timeline-axis"></i>
+                    <div class="layui-timeline-content layui-text">
+                        <div class="layui-timeline-title">2021/03/20: 镜像站同步策略已经更新。</div>
+                    </div>
+                </li>
+            </ul>
+
+
+
+            <fieldset class="layui-elem-field">
+                <legend>论坛</legend>
+                <div class="layui-field-box">
+                    <p>论坛是软件协会的门户网站之一，我们会在这里发布协会活动与产品相关的资讯，会在这里分享与交流自己的技术发现，欢迎你的加入！</p>
+                    <a target="_blank" href="//socoding.cn/" style="margin-top: 15px;" type="button"
+                        class="layui-btn">论坛</a>
+                </div>
+            </fieldset>
+
+            <fieldset class="layui-elem-field">
+                <legend>评测系统</legend>
+                <div class="layui-field-box">
+                    <p>程序设计与算法分析相关课程的教学平台，也用于软件学院香农先修班和 XCPC 集训队训练与比赛、SCNUCPC 校赛等。</p>
+
+                    <a style="margin-top: 15px;" target="_blank" href="http://10.191.65.243:5000/" type="button"
+                        class="layui-btn">SCNUOJ
+                        校园网入口（推荐）</a>
+                    <a style="margin-top: 15px;" target="_blank" href="http://10.191.65.243:8000/" type="button"
+                        class="layui-btn">DOMjudge
+                        校园网入口（推荐）</a>
+                    <a style="margin-top: 15px;" target="_blank" href="//oj.socoding.cn/" type="button"
+                        class="layui-btn layui-btn-primary">SCNUOJ 外网入口</a>
+                    <a style="margin-top: 15px;" target="_blank" href="//acm.socoding.cn/" type="button"
+                        class="layui-btn layui-btn-primary">DOMjudge 外网入口</a>
+                </div>
+            </fieldset>
+
+            <fieldset class="layui-elem-field">
+                <legend>镜像站</legend>
+                <div class="layui-field-box">
+                    <p>面向华师在校师生的开源软件镜像站，提供常见 Linux 发行版软件仓库和安装介质、应用程序和开发工具等的分发服务。</p>
+
+                    <a style="margin-top: 15px;" target="_blank" href="http://10.191.65.243:9000/" type="button"
+                        class="layui-btn">校园网入口（推荐）</a>
+                    <a style="margin-top: 15px;" target="_blank" href="//mirrors.socoding.cn/" type="button"
+                        class="layui-btn layui-btn-primary">外网入口</a>
+                </div>
+            </fieldset>
+
+
+
+        </div>
+    </div>
+
+    <script src="layui/layui.js" charset="utf-8"></script>
+    <script>
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    </script>
 </body>
 
 </html>
