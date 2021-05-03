@@ -1,0 +1,216 @@
+
+// Bobby Rong, 2021
+// 本文件用于开发，可以使用 npm start 生成 CSS 文件
+// 具体请看 package.json 文件
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/font/mem5YaGs126MiZpBA-UN_r8-VQ.ttf) format('truetype');
+}
+
+// Responsive
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
+
+:root {
+  // Fonts
+  --fsg: 135px;
+  --fsm: 75px;
+  --fss: 25px;
+  --fses: 16px;
+
+  --accent: #186efdaa;
+
+  --bg: #f5f5f5;
+  --sbg: #e4e6e6;
+  --fg: #3a3a3a;
+
+  --imgcol: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+
+  @media only screen and (max-width: $bp-large) {
+    --fsg: 100px;
+    --fsm: 65px;
+    --fss: 20px;
+  }
+}
+.darktheme {
+  --accent: #4b8ec4;
+  --bg: #19171a;
+  --sbg: #201e21;
+  --fg: #d8dee9;
+  --imgcol: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.2s ease-in-out;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  background-image: var(--imgcol), var(--imgbg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#themeButton {
+  position: absolute;
+  margin: 2em 2em 0 0;
+  right: 0;
+  top: 0;
+  color: var(--fg);
+  border: none;
+
+  cursor: pointer;
+  background-color: #00000000;
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.container {
+  width: 145vh;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  grid-gap: 30px;
+  padding: 20px;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-gap: 20px;
+    padding: 40px;
+  }
+
+  & > * {
+    width: 100%;
+  }
+}
+
+.card {
+  box-shadow: 0 5px 7px rgba(#000000, 0.35);
+  border-radius: 5px;
+  background-color: var(--sbg);
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 10px 10px rgba(#000000, 0.35);
+  }
+}
+
+.timeBlock {
+  grid-row: 1 / span 2;
+  grid-column: 2 / span 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / span 4;
+  }
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hour,
+#separator,
+#minutes {
+  font-size: var(--fsg);
+  font-weight: bolder;
+  color: var(--fg);
+}
+
+#greetings {
+  font-size: var(--fss);
+  color: var(--fg);
+}
+
+.buttonLink {
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 2;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  grid-gap: 30px;
+  padding: 20px;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / span 4;
+
+    grid-gap: 40px;
+    padding: 20px;
+  }
+
+  &__icon {
+    width: 23px;
+    height: 23px;
+    color: var(--fg);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sbg);
+    width: 100%;
+    box-shadow: 0 5px 7px rgba(#000000, 0.35);
+    border-radius: 5px;
+    &-1 {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    &-2 {
+      grid-row: 1;
+      grid-column: 2;
+    }
+    &-3 {
+      grid-row: 1;
+      grid-column: 3;
+    }
+    &-4 {
+      grid-row: 2;
+      grid-column: 1;
+    }
+    &-5 {
+      grid-row: 2;
+      grid-column: 2;
+    }
+    &-6 {
+      grid-row: 2;
+      grid-column: 3;
+    }
+
+    &:hover {
+      background-color: var(--accent);
+      transform: translateY(-0.2rem);
+
+      box-shadow: 0 10px 10px rgba(#000000, 0.35);
+
+      & svg {
+        stroke: var(--fg);
+      }
+    }
+  }
+}
