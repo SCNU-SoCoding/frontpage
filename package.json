@@ -21,6 +21,7 @@
     "postcss-cli": "^8.3.1"
   },
   "dependencies": {
-    "feather-icons": "^4.28.0"
+    "feather-icons": "^4.28.0",
+    "open-sans-fonts": "^1.6.2"
   }
 }

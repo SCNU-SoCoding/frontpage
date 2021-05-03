@@ -4,10 +4,11 @@
 // 具体请看 package.json 文件
 
 @font-face {
+  $font-file: '/node_modules/open-sans-fonts/open-sans/Regular/OpenSans-Regular.ttf';
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  src: url(/font/mem5YaGs126MiZpBA-UN_r8-VQ.ttf) format('truetype');
+  src: url($font-file) format('truetype');
 }
 
 // Responsive
