@@ -2,7 +2,7 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  src: url(/font/mem5YaGs126MiZpBA-UN_r8-VQ.ttf) format("truetype"); }
+  src: url("/node_modules/open-sans-fonts/open-sans/Regular/OpenSans-Regular.ttf") format("truetype"); }
 
 :root {
   --fsg: 135px;
